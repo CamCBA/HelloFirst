@@ -5,10 +5,10 @@
 
 FROM python:3.8
 # un script agregado
-ADD my_script.py / 
+ 
 #agrego dependencias, por ejemplo codigos de barra
 RUN pip install pystrich
 #INSTALL PANDAS
 RUN pip install pandas
 #cdm y ejecuto script
-CMD [ "python", "./my_script.py" ]
+
