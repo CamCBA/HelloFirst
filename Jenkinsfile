@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    Imagen = "Dockerfile"
+    Imagen = "."
     dockerImage = ''
   }
     agent any
@@ -14,7 +14,7 @@ pipeline {
         stage('Build'){
             steps{
                 script{
-                    dockerImage = docker.build .
+                    dockerImage = docker.build Imagen
                     }
             }
         }
