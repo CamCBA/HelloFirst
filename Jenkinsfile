@@ -16,10 +16,12 @@ pipeline {
                   }
             }
         }
-        stage('Build'){
-            steps{
-                
-            }
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build imagename
         }
+      }
+    }
     }
 }
