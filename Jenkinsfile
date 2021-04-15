@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'hello world'
         git([url: 'https://github.com/CamCBA/HelloFirst.git', branch: 'main'])
- 	//checkout scm
+ 	  checkout scm
 
       }
     }
@@ -14,7 +14,7 @@ pipeline {
      
       //sh "echo AWSKEY && sleep 10"
         echo 'hello build' 
-        docker.build Dockerfile
+        //docker.build Dockerfile
 
 
           }
