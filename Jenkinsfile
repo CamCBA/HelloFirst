@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def app
 
     stages {
         stage('Git') {
@@ -9,7 +10,7 @@ pipeline {
         }
         stage('Build'){
             steps{
-                docker.build("CamCBA/HelloFirst")
+                app = docker.build("CamCBA/HelloFirst")
             }
         }
     }
