@@ -7,6 +7,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
             }
         }
-
+        stage('Build'){
+            steps{
+                echo 'Build'
+                docker.build "Dockerfile"
+            }
+        }
     }
 }
