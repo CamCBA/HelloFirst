@@ -5,6 +5,6 @@ node{
         checkout scm
     }
     stage('Build'){
-        app = docker.build("")
+        app = docker.build("/var/jenkins_home/workspace/PipeFive")
     }                
 }
