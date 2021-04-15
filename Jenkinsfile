@@ -6,6 +6,6 @@ node{
     }
     stage('Build'){
         checkout scm
-        sh "docker build ."
+        app = docker.build("anandr72/nodeapp")
    }                
 }
