@@ -1,7 +1,4 @@
 pipeline {
-    environment {
-    dockerImage = ''
-  }
   agent any
   stages {
     stage('Cloning Git') {
@@ -17,7 +14,7 @@ pipeline {
      
       //sh "echo AWSKEY && sleep 10"
         echo 'hello build' 
-        dockerImage = docker.build Dockerfile
+        docker.build Dockerfile
 
 
           }
