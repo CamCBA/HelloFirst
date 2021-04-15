@@ -8,8 +8,10 @@ pipeline {
             }
         }
         stage('Build'){
-            script{
-                docker.build "Dockerfile"
+            steps{
+                script{
+                    docker.build "Dockerfile"
+                    }
             }
         }
     }
