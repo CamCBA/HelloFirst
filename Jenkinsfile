@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-       git([url: 'https://github.com/CamCBA/CodesDevOps.git', branch: 'main', credentialsId: 'Camila_Personal_Git_Access'])
+       git([url: 'https://github.com/CamCBA/HelloFirst.git', branch: 'main'])
        echo 'hola world'
 
       }
