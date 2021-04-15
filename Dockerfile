@@ -5,7 +5,7 @@
 
 FROM python:3.8
 # un script agregado
-ADD my_datascript.py / 
+ADD my_script.py / 
 #agrego dependencias, por ejemplo codigos de barra
 RUN pip install pystrich
 #INSTALL PANDAS
