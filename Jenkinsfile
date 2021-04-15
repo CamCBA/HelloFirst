@@ -14,7 +14,7 @@ pipeline {
         stage('Build'){
             steps{
                 script{
-                    dockerImage = docker.build Imagen
+                    dockerImage = docker.build .
                     }
             }
         }
