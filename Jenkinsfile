@@ -3,15 +3,17 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/CamCBA/HelloFirst.git', branch: 'main'])
- 	checkout scm
+        echo 'hello world'
+        //git([url: 'https://github.com/CamCBA/HelloFirst.git', branch: 'main'])
+ 	//checkout scm
 
       }
     }
     stage('Building image') {
       steps{
      
-      sh "echo AWSKEY && sleep 10"
+      //sh "echo AWSKEY && sleep 10"
+        echo 'hello build' 
 
 
           }
