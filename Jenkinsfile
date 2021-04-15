@@ -12,7 +12,8 @@ pipeline {
                 script{
                     
                     
-                  dockerImage = docker.build Imagen}
+                  dockerImage = docker.build Imagen
+                  }
             }
         }
         stage('Build'){
