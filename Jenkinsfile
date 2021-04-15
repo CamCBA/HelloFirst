@@ -8,8 +8,7 @@ pipeline {
             }
         }
         stage('Build'){
-            steps{
-                echo 'Build'
+            script{
                 docker.build "Dockerfile"
             }
         }
