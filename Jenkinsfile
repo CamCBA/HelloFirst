@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    app = ''
 
     stages {
         stage('Git') {
