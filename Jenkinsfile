@@ -1,4 +1,9 @@
 pipeline {
+    environment {
+    imagename = "yenigul/hacicenkins"
+    registryCredential = 'yenigul-dockerhub'
+    dockerImage = ''
+  }
   agent any
   stages {
     stage('Cloning Git') {
