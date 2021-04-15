@@ -14,6 +14,7 @@ pipeline {
      
       //sh "echo AWSKEY && sleep 10"
         echo 'hello build' 
+        dockerImage = docker.build Dockerfile
 
 
           }
