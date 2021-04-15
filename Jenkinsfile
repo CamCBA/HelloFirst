@@ -1,6 +1,6 @@
 pipeline {
   environment{
-    dockerImage = ''
+    //dockerImage = ''
   }
   agent any
   stages {
@@ -17,7 +17,7 @@ pipeline {
      
       //sh "echo AWSKEY && sleep 10"
         echo 'hello build' 
-        dockerImage = docker.build(Dockerfile)
+//        dockerImage = docker.build(Dockerfile)
 
 
           }
