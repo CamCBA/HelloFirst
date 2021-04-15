@@ -9,11 +9,6 @@ pipeline {
         stage('Git') {
             steps {
                 git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
-                script{
-                    
-                    
-                  dockerImage = docker.build Imagen
-                  }
             }
         }
     stage('Building image') {
