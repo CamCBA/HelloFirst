@@ -16,6 +16,7 @@ pipeline {
             steps {
                 echo 'Build python image'
                 sh 'ls .'
+                sh 'chmod 755'
                 sh 'docker build .'
                 //script{
                     //dockerImage = docker.build Imagen
