@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    Imagen = "Dockerfile"
+    Imagen = ""
     dockerImage = ''
   }
     agent any
