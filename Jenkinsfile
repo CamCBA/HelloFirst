@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Build python image'
                 sh 'ls .'
-                sh 'chmod 755 Dockerfile'
+                sh 'chmod 755 nohup.out'
                 sh 'docker build .'
                 //script{
                     //dockerImage = docker.build Imagen
