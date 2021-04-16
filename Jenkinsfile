@@ -1,11 +1,27 @@
-node{
-    def app
+pipeline {
+  environment {
+    Imagen = "."
+    dockerImage = ''
+  }
+    agent any
 
-    stage('Clone Git'){
-        checkout scm
+    stages {
+        stage('Git') {
+            steps {
+                git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
+                
+            }
+        }
+        stage('Build Image'){
+            steps {
+                echo 'Build python image'
+                script{
+                    dockerImage = docker.build Imagen
+                }
+                
+            }
+        }
+  
     }
-    stage('Build'){
-        checkout scm
-        app = docker.build("anandr72/nodeapp")
-   }                
 }
+
