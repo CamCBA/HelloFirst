@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image'){
             steps {
                 echo 'Build python image'
-                sh 'docker build .'
+                sh 'ls .'
                 //script{
                     //dockerImage = docker.build Imagen
                 //}
