@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Build python image'
                 sh 'ls .'
-                sh 'sudo chown -R 1000 volume_dir'
+                sh 'chown -R 1000 volume_dir'
                 sh 'docker build .'
                 //script{
                     //dockerImage = docker.build Imagen
