@@ -11,4 +11,7 @@ RUN pip install pystrich
 #INSTALL PANDAS
 RUN pip install pandas
 #cdm y ejecuto script
+RUN pip install matplotlib
+RUN pip install seaborn
+RUN pip install numpy
 
