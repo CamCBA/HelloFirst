@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Git') {
+        stage('Clone GitRepository') {
             steps {
                 git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
                 
