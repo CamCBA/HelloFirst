@@ -10,6 +10,7 @@ pipeline {
            steps {
                git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
 	       sh 'ls'
+	       sh 'docker build .'
           }
         }
      
