@@ -17,7 +17,7 @@ pipeline {
 	            steps {
 	                echo 'Build python image'
 	                sh 'ls'
-	                sh 'docker build -t pyfor:latest .'
+	                //sh 'docker build -t pyfor:latest .'
 	                //script{
 	                    //dockerImage = docker.build Imagen
 	                //}
