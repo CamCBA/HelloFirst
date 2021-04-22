@@ -1,29 +1,33 @@
 pipeline {
-	  environment {
-	    Imagen = ""
-	    dockerImage = ''
-	  }
-	    agent any
-	
-
-	    stages {
-	        stage('Clone GitRepository') {
-	            steps {
-	                git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
-	                
-	            }
-	        }
-	        stage('Build Image'){
-	            steps {
-	                echo 'Build python image'
-	                sh 'ls'
-	                sh 'docker build -t pyfor:latest .'
-	                //script{
-	                    //dockerImage = docker.build Imagen
-	                //}
-	                
-	            }
-	        }
-	  
-	    }
-	}
+    environment{
+        registry = "cambca/desired-18"
+        registryCredential = 'Hub_cam'
+        dockerImage = ''
+    }
+    agent any
+ stages {
+  stage('Clone git') {
+           steps {
+               git branch: 'main', url: 'https://github.com/CamCBA/HelloFirst.git'
+	       sh 'ls'
+          }
+        }
+     
+  stage('Build image') {
+      steps{
+          script{
+              dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          }
+      }
+    }
+  stage('Deploy'){
+      steps{
+          script{
+              docker.withRegistry( '', registryCredential){
+                  dockerImage.push()
+              }
+          }
+      }
+  }
+ }
+}
