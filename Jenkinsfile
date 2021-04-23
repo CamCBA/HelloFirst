@@ -17,7 +17,7 @@ pipeline {
   stage('Build image') {
       steps{
           script{
-              dockerImage = docker.build -t probe:latest
+              docker.build registry + ":$BUILD_NUMBER"
           }
       }
     }
