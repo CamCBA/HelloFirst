@@ -1,6 +1,7 @@
 pipeline {
     environment{
         registry = "cambca/desired-18"
+	def docker = "mydocker"
         registryCredential = 'Hub_cam'
         dockerImage = ''
     }
